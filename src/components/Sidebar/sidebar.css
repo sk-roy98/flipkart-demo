@@ -1,0 +1,27 @@
+.sidebar{
+    display:flexbox;
+    width: 40vw;
+    padding:0 0.7rem 2rem;
+    margin:0;
+    box-shadow: #99a 0 0 200px 0px;
+}
+.sidebar-label{
+    display:block;
+    margin:0;
+    padding: 1.3rem 1rem 0.4rem;
+}
+.sidebar-options{
+    display:block;
+    padding:0 1rem;
+}
+.sidebar button{
+    margin:1rem ;
+    padding:0.4rem;
+    background-color: #def;
+    font-size: medium;
+    border: solid #99a 1px ;
+    border-radius: 5px;
+}
+/* .inputFields{
+    box-shadow: #666 0 30px 90px 10px;
+} */
