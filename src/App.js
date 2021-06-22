@@ -1,16 +1,31 @@
-import './App.css';
-import Navbar from "./components/Navbar" 
-import Sidebar from "./components/Sidebar"
-import Product from "./components/Product"
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Product from "./components/Product";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const {data} = await axios.get("./data.json");
+      console.log(data);
+      setProducts(data)
+    }
+    fetchData()
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar/>
+        <Navbar />
       </header>
-      <Sidebar/>
-      <Product/>
+      <main>
+      <Sidebar products={products} setProducts={setProducts}/>
+      <Product products={products} />
+      </main>
     </div>
   );
 }
