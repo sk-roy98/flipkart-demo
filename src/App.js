@@ -11,10 +11,11 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const {data} = await axios.get("./data.json");
-      console.log(data);
       setProducts(data)
+      console.log(data)
     }
     fetchData()
+ 
   }, []);
 
   return (
