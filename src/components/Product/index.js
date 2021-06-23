@@ -2,7 +2,7 @@ import React from 'react'
 import "./product.css"
 import Card from "../Card"
 const Product = ({products}) => {
-console.log(products)
+// console.log(products)
     return (
         <div className="displaySection">
           {products?.map((item)=>(

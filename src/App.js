@@ -12,7 +12,7 @@ function App() {
     async function fetchData() {
       const {data} = await axios.get("./data.json");
       setProducts(data)
-      console.log(data)
+     
     }
     fetchData()
  

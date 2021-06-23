@@ -4,20 +4,20 @@
 }
 .cardContainer img{
     margin:0;
-    width: 240px;
-    height:260px;
+    width: 280px;
+    height:310px;
     flex-wrap: wrap;
     /* object-fit: contain; */
 }
 .cardContainer{
     margin:1rem 0.5rem;
-    width: 240px;
-    height:380px;
+    width: 280px;
+    height:430px;
     display:flex;
     flex-direction: column;
     border: none;
     border-radius: 7px;
-    box-shadow: rgba(0,0,0,0.32) 0 10px 10px 3px, rgba(0,0,0,0.2) 0 10px 8px -1px inset;
+    box-shadow: rgba(63, 23, 23, 0.26) 0 10px 10px 3px, rgba(0,0,0,0.1) 0 10px 8px -1px inset;
 }
 .cardContent{
     height: 150px;
