@@ -81,15 +81,63 @@ const Sidebar = ({ products, setProducts }) => {
         <h3 className="filterLabel">Filter by Gender:</h3>
         <Select onChange={handleChange} options={genderOptions} />
         <h3 className="filterLabel">Filter by Brand:</h3>
-        <Checkbox
+        <Checkbox 
           checked={false}
-          icon
+          icon= { 
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              backgroundColor: "#2874f0",
+              alignSelf: "stretch",
+            }}
+          >
+          </div>}
           onChange={handleChange}
           borderColor="#3084D9"
-          visibility="hidden"
+          borderVisibility="none"
           style={{ cursor: "pointer" }}
           labelStyle={{ marginLeft: 5, userSelect: "none" }}
           label="Calvin Klein"
+        />
+        <Checkbox 
+          checked={false}
+          icon= { 
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              backgroundColor: "#2874f0",
+              alignSelf: "stretch",
+            }}
+          >
+          </div>}
+          onChange={handleChange}
+          borderColor="#3084D9"
+          borderVisibility="none"
+          style={{ cursor: "pointer" }}
+          labelStyle={{ marginLeft: 5, userSelect: "none" }}
+          label="Allen Solly"
+        />
+        
+        <Checkbox 
+          checked={false}
+          icon= { 
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              backgroundColor: "#2874f0",
+              alignSelf: "stretch",
+            }}
+          >
+          </div>}
+          onChange={handleChange}
+          borderColor="#3084D9"
+          borderVisibility="none"
+          style={{ cursor: "pointer" }}
+          labelStyle={{ marginLeft: 5, userSelect: "none" }}
+          label="Flying Machine"
         />
       </div>
     </div>
