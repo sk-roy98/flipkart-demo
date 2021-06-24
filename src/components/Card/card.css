@@ -4,15 +4,18 @@
 }
 .cardContainer img{
     margin:0;
-    width: 280px;
-    height:310px;
+    width: 17.5rem;
+    height:19.1rem;
     flex-wrap: wrap;
+    border-top-left-radius: 7px ;
+    border-top-right-radius: 7px ;
     /* object-fit: contain; */
 }
 .cardContainer{
     margin:1rem 0.5rem;
-    width: 280px;
-    height:430px;
+    width: 17.5rem;
+    height:27rem;
+    background-color: #fff;
     display:flex;
     flex-direction: column;
     border: none;
@@ -48,6 +51,10 @@
 }
 .brand-size pre{
     font-size: 1.1rem;
+}
+.price-add span{
+    font-weight:bolder;
+    font-size: larger;
 }
 .price-add button{
     background-color: #2874f0;

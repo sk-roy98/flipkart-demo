@@ -1,8 +1,12 @@
 .displaySection{
-    width: 70vw;
+    width:70vw;
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    row-gap: 0.45 rem;
+    row-gap: 0.5 rem;
     justify-items: center;
     align-items: center;
+    margin: 0.7rem;
+    border-radius: 7px;
+    box-shadow: rgba(63, 23, 23, 0.26) 0 10px 10px 3px, rgba(0,0,0,0.1) 10px 10px 29px -1px
 }
