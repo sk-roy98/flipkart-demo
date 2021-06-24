@@ -17,7 +17,7 @@ const genderOptions = [
 const Sidebar = ({ products, setProducts }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [sortedList, setSortedList] = useState(null);
-  const [brand, setBrand] = useState("")
+  const [brand, setBrand] = useState("");
   const [allProducts, setAllProducts] = useState(() => products);
 
   const handleChange = (option) => {
@@ -72,33 +72,35 @@ const Sidebar = ({ products, setProducts }) => {
     }
   }, [sortedList, setProducts]);
 
-  const clearFilters=()=>{
+  const clearFilters = () => {
     // setSelectedOption(null)
-    async function data () {
-      const {fetchData}=await axios.get("/data.json")
-      setProducts(fetchData)
+    async function data() {
+      const { fetchData } = await axios.get("/data.json");
+      setProducts(fetchData);
     }
-    data()
-  }
-  const brandFilter =(e)=>{
-    setBrand  (e.target.value);
-    setSortedList(()=>[...products].filter((prod)=>
-      prod.brand.includes(brand)
-    )
-    )
-  }
+    data();
+  };
+  const brandFilter = (e) => {
+    setBrand(e.target.value);
+    setSortedList(() =>
+      [...products].filter((prod) => prod.brand.includes(brand))
+    );
+  };
 
   return (
     <div className="sidebar-container">
       <h2>Sort and Filter</h2>
       <div className="sidebar-filters">
-        
         <h3 className="filterLabel">Sort by Price:</h3>
-        <Select onChange={handleChange} options={sortOptions} styles={{width:"5rem"}}/>
-        
+        <Select
+          onChange={handleChange}
+          options={sortOptions}
+          styles={{ width: "5rem" }}
+        />
+
         <h3 className="filterLabel">Filter by Gender:</h3>
         <Select onChange={handleChange} options={genderOptions} />
-        
+
         <h3 className="filterLabel">Filter by Brand:</h3>
         <div className="checkboxContainer">
           <Checkbox
@@ -116,12 +118,16 @@ const Sidebar = ({ products, setProducts }) => {
             onChange={brandFilter}
             borderColor="#3084D9"
             borderVisibility="none"
-            style={{ cursor: "pointer"}}
-            containerStyle={{display:"inline-block", width:"fit-content", padding: "0.3rem 0"}}
+            style={{ cursor: "pointer" }}
+            containerStyle={{
+              display: "inline-block",
+              width: "fit-content",
+              padding: "0.3rem 0",
+            }}
             labelStyle={{ marginLeft: 5, userSelect: "none" }}
             label="Calvin Klein"
           />
-        
+
           <Checkbox
             checked={false}
             icon={
@@ -138,11 +144,11 @@ const Sidebar = ({ products, setProducts }) => {
             borderColor="#3084D9"
             borderVisibility="none"
             style={{ cursor: "pointer" }}
-            containerStyle={{display:"inline-block", width:"fit-content"}}
+            containerStyle={{ display: "inline-block", width: "fit-content" }}
             labelStyle={{ marginLeft: 5, userSelect: "none" }}
             label="Allen Solly"
           />
-        
+
           <Checkbox
             checked={false}
             icon={
@@ -159,12 +165,12 @@ const Sidebar = ({ products, setProducts }) => {
             borderColor="#3084D9"
             borderVisibility="none"
             style={{ cursor: "pointer" }}
-            containerStyle={{display:"inline-block", width:"fit-content"}}
+            containerStyle={{ display: "inline-block", width: "fit-content" }}
             labelStyle={{ marginLeft: 5, userSelect: "none" }}
             label="Flying Machine"
           />
         </div>
-        
+
         <h3 className="filterLabel">Filter by Size:</h3>
         <div className="checkboxContainer">
           <Checkbox
@@ -182,12 +188,16 @@ const Sidebar = ({ products, setProducts }) => {
             onChange={handleChange}
             borderColor="#3084D9"
             borderVisibility="none"
-            style={{ cursor: "pointer"}}
-            containerStyle={{display:"inline-block", width:"fit-content", padding: "0.3rem 0"}}
+            style={{ cursor: "pointer" }}
+            containerStyle={{
+              display: "inline-block",
+              width: "fit-content",
+              padding: "0.3rem 0",
+            }}
             labelStyle={{ marginLeft: 5, userSelect: "none" }}
             label="Small"
           />
-        
+
           <Checkbox
             checked={false}
             icon={
@@ -204,11 +214,11 @@ const Sidebar = ({ products, setProducts }) => {
             borderColor="#3084D9"
             borderVisibility="none"
             style={{ cursor: "pointer" }}
-            containerStyle={{display:"inline-block", width:"fit-content"}}
+            containerStyle={{ display: "inline-block", width: "fit-content" }}
             labelStyle={{ marginLeft: 5, userSelect: "none" }}
             label="Medium"
           />
-        
+
           <Checkbox
             checked={false}
             icon={
@@ -225,7 +235,7 @@ const Sidebar = ({ products, setProducts }) => {
             borderColor="#3084D9"
             borderVisibility="none"
             style={{ cursor: "pointer" }}
-            containerStyle={{display:"inline-block", width:"fit-content"}}
+            containerStyle={{ display: "inline-block", width: "fit-content" }}
             labelStyle={{ marginLeft: 5, userSelect: "none" }}
             label="Large"
           />
@@ -245,12 +255,16 @@ const Sidebar = ({ products, setProducts }) => {
             borderColor="#3084D9"
             borderVisibility="none"
             style={{ cursor: "pointer" }}
-            containerStyle={{display:"inline-block", width:"fit-content"}}
+            containerStyle={{ display: "inline-block", width: "fit-content" }}
             labelStyle={{ marginLeft: 5, userSelect: "none" }}
             label="Extra Large"
           />
         </div>
-        <button className= "clearFilters" onClick={clearFilters}>Clear Filters</button>
+        <div className="sidebar-button">
+          <button className="clearFilters" onClick={clearFilters}>
+            Clear Filters
+          </button>
+        </div>
       </div>
     </div>
   );

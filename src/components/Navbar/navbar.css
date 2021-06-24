@@ -6,6 +6,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 12px;
+    float:inline-start;
   }
   
   .search {

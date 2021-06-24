@@ -1,14 +1,5 @@
 [
     {
-        "id": 2,
-        "brand": "Calvin Klein",
-        "title": "Tapered fit men jeans",
-        "gender": "M",
-        "size": ["M", "L", "XL"],
-        "price": 6589,
-        "image": "https://rukminim1.flixcart.com/image/714/857/k070zgw0/jean/g/f/b/32-j3136061bz-calvin-klein-jeans-original-imafjvmzb6ffhdad.jpeg?q=50"
-    },
-    {
         "id": 1,
         "brand": "Allen solly",
         "title": "Full sleeves women printed T-shirt",
@@ -17,8 +8,28 @@
         "price": 879,
         "image": "https://rukminim1.flixcart.com/image/495/594/kj8wccw0/sweatshirt/x/p/t/s-ahstcrgpd34283-allen-solly-original-imafyrbpp3jdxhru.jpeg?q=50"
     },
+
+    {
+        "id": 2,
+        "brand": "Calvin Klein",
+        "title": "Tapered fit men jeans",
+        "gender": "M",
+        "size": ["M", "L", "XL"],
+        "price": 6589,
+        "image": "https://rukminim1.flixcart.com/image/714/857/k070zgw0/jean/g/f/b/32-j3136061bz-calvin-klein-jeans-original-imafjvmzb6ffhdad.jpeg?q=50"
+    },
+    
     {
         "id": 3,
+        "brand": "Allen Solly",
+        "title": "Walking black shoe for men",
+        "gender": "M",
+        "size": ["M","XL"],
+        "price": 1880,
+        "image": "https://rukminim1.flixcart.com/image/800/960/k40798w0/shoe/y/a/y/asscwrgbd51181-7-allen-solly-black-original-imafmvsjjdywf4hk.jpeg?q=50"
+    },
+    {
+        "id": 4,
         "brand": "Calvin Klein",
         "title": "Solid women black tights",
         "gender": "F",
@@ -27,7 +38,7 @@
         "image": "https://rukminim1.flixcart.com/image/800/960/kn97te80/tight/f/7/e/xs-4wh9l612007-calvin-klein-original-imagfz8drqc6rjhz.jpeg?q=50"
     },
     {
-        "id": 7,
+        "id": 5,
         "brand": "Flying Machine",
         "title": "Slim fit lightblue women jeans",
         "gender": "F",
@@ -36,7 +47,7 @@
         "image": "https://rukminim1.flixcart.com/image/495/594/k66sh3k0/jean/u/r/a/28-fwesjn1494-flying-machine-original-imafzzehfzhcs3mq.jpeg?q=50"
     },
     {
-        "id": 4,
+        "id": 6,
         "brand": "Calvin Klein",
         "title": "Small red cabin Luggage",
         "gender": ["M", "F"],
@@ -45,7 +56,7 @@
         "image": "https://rukminim1.flixcart.com/image/800/960/k6s82vk0/suitcase/e/f/4/down-to-fly-lh818df9l50-check-in-luggage-calvin-klein-28-original-imafp5euzfhrtabk.jpeg?q=50"
     },
     {
-        "id": 5,
+        "id": 7,
         "brand": "Allen Solly",
         "title": "Solid mens polo neck T-shirt",
         "gender": "M",
@@ -53,15 +64,7 @@
         "price": 699,
         "image": "https://rukminim1.flixcart.com/image/495/594/k5zn9u80/t-shirt/3/z/m/3xl-askporgff17647-allen-solly-original-imafk8s5wv5mcfm9.jpeg?q=50"
     },
-    {
-        "id": 6,
-        "brand": "Allen Solly",
-        "title": "Walking black shoe for men",
-        "gender": "M",
-        "size": ["M","XL"],
-        "price": 1880,
-        "image": "https://rukminim1.flixcart.com/image/800/960/k40798w0/shoe/y/a/y/asscwrgbd51181-7-allen-solly-black-original-imafmvsjjdywf4hk.jpeg?q=50"
-    },
+    
     {
         "id": 8,
         "brand": "Flying Machine",
