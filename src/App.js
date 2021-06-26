@@ -7,12 +7,13 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [products, setProducts] = useState(null);
+  const [allProducts, setAllProducts]= useState(null);
 
   useEffect(() => {
     async function fetchData() {
       const {data} = await axios.get("./data.json");
       setProducts(data)
-     
+      setAllProducts(data)
     }
     fetchData()
  
@@ -24,7 +25,7 @@ function App() {
         <Navbar />
       </header>
       <main>
-      <Sidebar products={products} setProducts={setProducts}/>
+      <Sidebar products={products} allProducts={allProducts} setProducts={setProducts}/>
       <Product products={products} />
       </main>
     </div>

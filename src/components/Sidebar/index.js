@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./sidebar.css";
-import axios from "axios";
 import Select from "react-select";
 import Checkbox from "react-custom-checkbox";
 
@@ -14,15 +13,16 @@ const genderOptions = [
   { value: "women", label: " Women" },
 ];
 
-const Sidebar = ({ products, setProducts }) => {
+const Sidebar = ({ products, allProducts, setProducts }) => {
+  // const [allproducts, setAllProducts] = useState(products);
+  console.log(products);
+  console.log(allProducts);
   const [selectedOption, setSelectedOption] = useState(null);
   const [sortedList, setSortedList] = useState(null);
   const [brand, setBrand] = useState("");
-  const [allProducts, setAllProducts] = useState(() => products);
 
   const handleChange = (option) => {
     setSelectedOption(option);
-    console.log(selectedOption);
   };
 
   useEffect(() => {
@@ -42,14 +42,14 @@ const Sidebar = ({ products, setProducts }) => {
       }
 
       if (option.value === "men") {
-        const filtered = [...products].filter((item) => {
+          let filtered = [...allProducts].filter((item) => {
           return item.gender === "M";
         });
         setSortedList(filtered);
       }
 
       if (option.value === "women") {
-        const filtered = [...products].filter((item) => {
+        let filtered = [...allProducts].filter((item) => {
           return item.gender === "F";
         });
         setSortedList(filtered);
@@ -61,10 +61,19 @@ const Sidebar = ({ products, setProducts }) => {
     };
 
     if (selectedOption) {
-      // console.log(selectedOption)
       handleSort(selectedOption);
     }
   }, [selectedOption]);
+
+  const brandFilter = (e) => {
+    if(e){
+      setBrand(e.target.value)
+    }
+    console.log(brand)
+    setSortedList((prev) =>prev=
+      [...products].filter((prod) => prod.brand.includes(brand))
+    );
+  };
 
   useEffect(() => {
     if (sortedList) {
@@ -73,18 +82,13 @@ const Sidebar = ({ products, setProducts }) => {
   }, [sortedList, setProducts]);
 
   const clearFilters = () => {
-    // setSelectedOption(null)
-    async function data() {
-      const { fetchData } = await axios.get("/data.json");
-      setProducts(fetchData);
-    }
-    data();
-  };
-  const brandFilter = (e) => {
-    setBrand(e.target.value);
-    setSortedList(() =>
-      [...products].filter((prod) => prod.brand.includes(brand))
-    );
+    // async function data() {
+    //   const { fetchData } = await axios.get("/data.json");
+    //   setProducts(fetchData);
+    // }
+    // data();
+    setProducts(allProducts)
+    // console.log(products)
   };
 
   return (
