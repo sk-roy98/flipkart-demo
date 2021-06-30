@@ -2,7 +2,7 @@
     width:70vw;
     background-color: #fff;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     row-gap: 0.5 rem;
     justify-items: center;
     align-items: center;
